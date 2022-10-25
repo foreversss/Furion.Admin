@@ -6,5 +6,8 @@ namespace admin.Core.Repositorys.Sys.Impl;
 
 public class UserRepository : Repository<SysUser>, IUserRepository, ITransient
 {
+    
+    
+    
 
 }
