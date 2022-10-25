@@ -1,0 +1,9 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+
+  "ConnectionStrings": {
+    //Mysql连接字符串
+    "DefaultConnection": "Data Source=localhost;Database=Admin.NET;User ID=root;Password=123456;pooling=true;port=3306;sslmode=none;CharSet=utf8;",
+    "MultiTenantConnection": "Data Source=localhost;Database=Admin.NET_SaaS;User ID=root;Password=123456;pooling=true;port=3306;sslmode=none;CharSet=utf8;"
+  }
+}

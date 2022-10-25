@@ -4,5 +4,21 @@
         <name>admin.Application</name>
     </assembly>
     <members>
+        <member name="T:admin.Application.System.Users.Impl.UserService">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:admin.Application.System.Users.Impl.UserService.GetUser">
+            <summary>
+            查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:admin.Application.System.Users.IUserService">
+            <summary>
+            用户业务逻辑
+            </summary>
+        </member>
     </members>
 </doc>

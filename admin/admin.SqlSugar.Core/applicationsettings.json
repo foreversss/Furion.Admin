@@ -1,0 +1,6 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/net6/schemas/v3/furion-schema.json",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=127.0.0.1;Database=Admin.NET;charset=utf8;uid=root;pwd=123456;"
+  }
+}

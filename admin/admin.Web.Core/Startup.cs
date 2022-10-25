@@ -12,7 +12,6 @@ public class Startup : AppStartup
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        
         services.AddJwt<JwtHandler>();
         services.AddConfigurableOptions<AppInfoOptions>();
         services.AddScoped<RequestAuditFilter>();

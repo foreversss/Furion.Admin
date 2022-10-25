@@ -1,12 +1,12 @@
 ﻿{
   "SpecificationDocumentSettings": {
-    "DocumentTitle": "Furion | 规范化接口",
+    "DocumentTitle": "接口文档",
     "GroupOpenApiInfos": [
       {
-        "Group": "Default111",
-        "Title": "规范化接口演示",
-        "Description": "让 .NET 开发更简单，更通用，更流行。",
-        "Version": "1.0.0",
+        "Group": "Group1",
+        "Title": "分组标题",
+        "Description": "这里是分组描述",
+        "Version": "版本号",
         "TermsOfService": "https://furion.icu",
         "Contact": {
           "Name": "百小僧",
@@ -14,15 +14,10 @@
           "Email": "monksoul@outlook.com"
         },
         "License": {
-          "Name": "Apache-2.0",
-          "Url": "https://gitee.com/dotnetchina/Furion/blob/rc1/LICENSE"
+          "Name": "MIT",
+          "Url": "https://gitee.com/dotnetchina/Furion/blob/alpha/LICENSE"
         }
       }
     ]
-  },
-  "AppInfo": {
-    "Name": "Furion111",
-    "Version": "1.0.0",
-    "Company": "Baiqian"
   }
 }

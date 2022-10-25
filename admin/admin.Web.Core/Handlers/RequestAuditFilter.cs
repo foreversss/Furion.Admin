@@ -23,7 +23,5 @@ public class RequestAuditFilter:IAsyncActionFilter
         // 判断是否请求成功，没有异常就是请求成功
         var isRequestSucceed = actionContext.Exception == null;
 
-        
-        throw new System.NotImplementedException();
     }
 }

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\admin.Application\admin.Application.csproj" />
+    <ProjectReference Include="..\admin.SqlSugar.Core\admin.SqlSugar.Core.csproj" />
   </ItemGroup>
 
 </Project>

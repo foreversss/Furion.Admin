@@ -4,5 +4,26 @@
         <name>admin.Core</name>
     </assembly>
     <members>
+        <member name="T:admin.Core.Entity.Sys.SysUser">
+            <summary>
+            系统用户
+            </summary>
+        </member>
+        <member name="P:admin.Core.Entity.Sys.SysUser.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:admin.Core.Entity.Sys.SysUser.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="T:admin.Core.Repositorys.IRepository`1">
+            <summary>
+            仓储
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
     </members>
 </doc>

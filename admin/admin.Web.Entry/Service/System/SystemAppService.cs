@@ -33,6 +33,7 @@ public class SystemAppService : IDynamicApiController
         //读取配置文件 方式一
         // var documentTitle1 = App.Configuration["SpecificationDocumentSettings:DocumentTitle"];
         var documentTitle1 = App.GetConfig<string>("SpecificationDocumentSettings:DocumentTitle");
+        
         //读取配置文件方式二
         var documentTitle2 = _configuration.GetSection("SpecificationDocumentSettings:DocumentTitle").Get<string>();
         var documentTitle3 = _configuration["SpecificationDocumentSettings:DocumentTitle"];;
