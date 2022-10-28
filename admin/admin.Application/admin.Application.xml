@@ -4,6 +4,41 @@
         <name>admin.Application</name>
     </assembly>
     <members>
+        <member name="T:admin.Application.System.Dtos.UserInput">
+            <summary>
+            添加用户
+            </summary>
+        </member>
+        <member name="P:admin.Application.System.Dtos.UserInput.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:admin.Application.System.Dtos.UserInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:admin.Application.System.Dtos.UserInput.Confirm">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="P:admin.Application.System.Dtos.UserOutput.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:admin.Application.System.Dtos.UserOutput.Account">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:admin.Application.System.Dtos.UserOutput.Token">
+            <summary>
+            密码
+            </summary>
+        </member>
         <member name="T:admin.Application.System.Users.Impl.UserService">
             <summary>
             用户
@@ -15,10 +50,38 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:admin.Application.System.Users.Impl.UserService.Login(admin.Core.Models.Sys.LoginInput)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:admin.Application.System.Users.Impl.UserService.AddUser(admin.Application.System.Dtos.UserInput)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="loginInput"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
         <member name="T:admin.Application.System.Users.IUserService">
             <summary>
             用户业务逻辑
             </summary>
+        </member>
+        <member name="M:admin.Application.System.Users.IUserService.Login(admin.Core.Models.Sys.LoginInput)">
+            <summary>
+            登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:admin.Application.System.Users.IUserService.AddUser(admin.Application.System.Dtos.UserInput)">
+            <summary>
+            登录
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>

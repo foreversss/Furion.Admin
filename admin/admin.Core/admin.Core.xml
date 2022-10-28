@@ -4,6 +4,96 @@
         <name>admin.Core</name>
     </assembly>
     <members>
+        <member name="F:admin.Core.Const.ClaimConst.ClaimUserid">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.ClaimConst.ClaimAccount">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.ClaimConst.ClaimName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.ClaimConst.ClaimSuperAdmin">
+            <summary>
+            是否超级管理
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.ClaimConst.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.ClaimConst.ClaimOrgId">
+            <summary>
+            用户组织机构Id
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.ClaimConst.ClaimOrgName">
+            <summary>
+            用户组织机构名称
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.ClaimConst.DataScopes">
+            <summary>
+            数据权限
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.DefaultPassword">
+            <summary>
+            默认密码
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyUser">
+            <summary>
+            用户缓存
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyMenu">
+            <summary>
+            菜单缓存
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyPermission">
+            <summary>
+            权限缓存
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyDataScopes">
+            <summary>
+            数据范围缓存
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyCode">
+            <summary>
+            验证码缓存
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyAll">
+            <summary>
+            所有缓存关键字集合
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyTimerJob">
+            <summary>
+            定时任务缓存
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.CacheKeyOnlineUser">
+            <summary>
+            在线用户缓存
+            </summary>
+        </member>
+        <member name="F:admin.Core.Const.CommonConst.SysManagerRoleCode">
+            <summary>
+            系统管理员角色编码
+            </summary>
+        </member>
         <member name="T:admin.Core.Entity.Sys.SysUser">
             <summary>
             系统用户
@@ -14,9 +104,421 @@
             主键
             </summary>
         </member>
-        <member name="P:admin.Core.Entity.Sys.SysUser.UserName">
+        <member name="P:admin.Core.Entity.Sys.SysUser.Account">
             <summary>
             用户名称
+            </summary>
+        </member>
+        <member name="P:admin.Core.Entity.Sys.SysUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:admin.Core.Enum.ErrorCode">
+            <summary>
+            系统错误码
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1000">
+            <summary>
+            用户名或密码不正确
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1001">
+            <summary>
+            非法操作！禁止删除自己
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1002">
+            <summary>
+            记录不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1003">
+            <summary>
+            账号已存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1004">
+            <summary>
+            旧密码不匹配
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1005">
+            <summary>
+            测试数据禁止更改admin密码
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1006">
+            <summary>
+            数据已存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1007">
+            <summary>
+            数据不存在或含有关联引用，禁止删除
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1008">
+            <summary>
+            禁止为管理员分配角色
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1009">
+            <summary>
+            重复数据或记录含有不存在数据
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1010">
+            <summary>
+            禁止为超级管理员角色分配权限
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1011">
+            <summary>
+            非法数据
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1012">
+            <summary>
+            Id不能为空
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1013">
+            <summary>
+            所属机构不在自己的数据范围内
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1014">
+            <summary>
+            禁止删除超级管理员
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1015">
+            <summary>
+            禁止修改超级管理员状态
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1016">
+            <summary>
+            没有权限
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1017">
+            <summary>
+            账号已冻结
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1018">
+            <summary>
+            禁止删除管理员
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1019">
+            <summary>
+            禁止删除系统管理员角色(sys_manager_role)
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1020">
+            <summary>
+            禁止修改系统管理员角色(sys_manager_role)
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1021">
+            <summary>
+            禁止为系统管理员角色(sys_manager_role)分配权限
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1022">
+            <summary>
+            禁止为超级管理员分配角色
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1023">
+            <summary>
+            禁止删除默认租户
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D2000">
+            <summary>
+            父机构不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D2001">
+            <summary>
+            当前机构Id不能与父机构Id相同
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D2002">
+            <summary>
+            已有相同组织机构,编码或名称相同
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D2003">
+            <summary>
+            没有权限操作机构
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D2004">
+            <summary>
+            该机构下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D2005">
+            <summary>
+            附属机构下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D2006">
+            <summary>
+            只能增加下级机构
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D3000">
+            <summary>
+            字典类型不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D3001">
+            <summary>
+            字典类型已存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D3002">
+            <summary>
+            字典类型下面有字典值禁止删除
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D3003">
+            <summary>
+            字典值已存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D3004">
+            <summary>
+            字典值不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D3005">
+            <summary>
+            字典状态错误
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4000">
+            <summary>
+            菜单已存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4001">
+            <summary>
+            路由地址为空
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4002">
+            <summary>
+            打开方式为空
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4003">
+            <summary>
+            权限标识格式为空
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4004">
+            <summary>
+            权限标识格式错误
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4005">
+            <summary>
+            权限不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4006">
+            <summary>
+            父级菜单不能为当前节点，请重新选择父级菜单
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D4007">
+            <summary>
+            不能移动根节点
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D5000">
+            <summary>
+            已存在同名或同编码应用
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D5001">
+            <summary>
+            默认激活系统只能有一个
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D5002">
+            <summary>
+            该应用下有菜单禁止删除
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D5003">
+            <summary>
+            已存在同名或同编码应用
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D6000">
+            <summary>
+            已存在同名或同编码职位
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D6001">
+            <summary>
+            该职位下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D7000">
+            <summary>
+            通知公告状态错误
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D7001">
+            <summary>
+            通知公告删除失败
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D7002">
+            <summary>
+            通知公告编辑失败
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D7003">
+            <summary>
+            通知公告操作失败，非发布者不能进行操作
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D8000">
+            <summary>
+            文件不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D8001">
+            <summary>
+            不允许的文件类型
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D8002">
+            <summary>
+            文件超过允许大小
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D9000">
+            <summary>
+            已存在同名或同编码参数配置
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D9001">
+            <summary>
+            禁止删除系统参数
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1100">
+            <summary>
+            已存在同名任务调度
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1101">
+            <summary>
+            任务调度不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1200">
+            <summary>
+            演示环境禁止修改数据
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1300">
+            <summary>
+            已存在同名或同管理员或同主机租户
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1400">
+            <summary>
+            该表代码模板已经生成过
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1501">
+            <summary>
+            该类型不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1502">
+            <summary>
+            该字段不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1503">
+            <summary>
+            该类型不是枚举类型
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1504">
+            <summary>
+            该实体不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1505">
+            <summary>
+            父菜单不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1600">
+            <summary>
+            已存在同名业务名称
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.xg1000">
+            <summary>
+            已存在同名或同编码项目
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.xg1001">
+            <summary>
+            已存在相同证件号码人员
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.xg1002">
+            <summary>
+            检测数据不存在
+            </summary>
+        </member>
+        <member name="F:admin.Core.Enum.ErrorCode.D1700">
+            <summary>
+            参数不能为空
+            </summary>
+        </member>
+        <member name="T:admin.Core.Models.Sys.LoginInput">
+            <summary>
+            登录输入参数
+            </summary>
+        </member>
+        <member name="P:admin.Core.Models.Sys.LoginInput.Account">
+            <summary>
+            用户名
+            </summary>
+            <example>superAdmin</example>
+        </member>
+        <member name="P:admin.Core.Models.Sys.LoginInput.Password">
+            <summary>
+            密码
+            </summary>
+            <example>123456</example>
+        </member>
+        <member name="T:admin.Core.Options.RefreshTokenSettingOptions">
+            <summary>
+            刷新令牌设置
+            </summary>
+        </member>
+        <member name="P:admin.Core.Options.RefreshTokenSettingOptions.ExpiredTime">
+            <summary>
+            令牌过期时间（分钟）
             </summary>
         </member>
         <member name="T:admin.Core.Repositorys.IRepository`1">

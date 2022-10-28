@@ -8,17 +8,17 @@
 
   <ItemGroup>
     <None Remove="admin.Core.xml" />
+    <None Update="applicationconfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Furion" Version="3.3.0" />
-    <PackageReference Include="Furion.Extras.Authentication.JwtBearer" Version="3.3.0" />
+    <PackageReference Include="Furion.Extras.Authentication.JwtBearer" Version="4.6.9" />
     <PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="3.3.0" />
     <PackageReference Include="SqlSugarCore" Version="5.1.3.28-preview08" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models" />
+    <PackageReference Include="Yitter.IdGenerator" Version="1.0.15" />
   </ItemGroup>
 
 </Project>
